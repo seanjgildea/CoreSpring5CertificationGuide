@@ -38,3 +38,7 @@ Lots of answers seem correct or use reverse boolean logic. "Which of these are N
 - Read every answer option. ...
 - Answer the questions you know first. 
 - Look for *Absolute* and *negative* mentions 
+
+## Feel Free to contribute!
+
+Let me know if this study guide helped you pass or was informative. Starring, forking or following me is much appreciated! Good luck!
