@@ -1,7 +1,7 @@
 # Data Management
 **Core Spring 5.0 Certification Exam Study Guide**
 
-[<< Back to Home](README.md)
+[<< Back to Table of Contents](README.md)
 
 :star: Star this project on GitHub — It helps!!
 
