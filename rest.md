@@ -94,10 +94,5 @@ RestTemplate is a synchronous client to perform HTTP requests. It is the origina
 
 # If you saw an example using RestTemplate would you understand what it is doing?
 
-RestTemplate restTemplate = new RestTemplate();
+![resttemplate](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/RestTemplate-methods.png)
 
-String result = restTemplate.getForObject(uri, String.class);
-
-ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-
-EmployeeVO result = restTemplate.postForObject( uri, newEmployee, EmployeeVO.class);

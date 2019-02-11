@@ -23,7 +23,7 @@ Checked exceptions add unncessary code and create more dependency.
 
 # What is the data access exception hierarchy?
 
-
+![heirarchy](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/data-access-exception-hierarchy.jpg)
 
 # How do you configure a DataSource in Spring?
 
@@ -286,8 +286,9 @@ An instant repository is a repository resulting from extending some class repres
 
 Either extend some implementation of a repository interface or annotate the future instant repo class with @RepositoryDefinition. Spring data has many built in functions and there is no code needed.
 
-What is the naming convention for finder methods?
+# What is the naming convention for finder methods?
 
+![finder methods](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/finder-methods.png)
 
 # How are Spring Data repositories implemented by Spring at runtime?
 

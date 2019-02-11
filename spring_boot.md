@@ -50,6 +50,7 @@ Externalized Configuration
 
 @SpringBootApplication –-> @Configuration, @EnableAutoConfiguration, @ComponentScan
 
+![spring-boot-annotations](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/spring-boot-annotations.png)
 
 # Would you recognize Configuration Properties if you saw them in the exam?
 

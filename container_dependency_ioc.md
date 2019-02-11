@@ -154,6 +154,8 @@
   For these annotation to be available you must have the CommonAnnotationBeanPostProcessor registered in context. They are declared with the init or destroy methods and also are called upon instantiation or just before beans are removed from the container.
 
 
+![jsr330](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/jsr330.png)
+
 
 
 
