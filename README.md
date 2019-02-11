@@ -7,25 +7,15 @@ Core Spring 5.0 Certification Exam Study Guide
 ## Table of content
 
 - [Container, Dependency and IOC](container_dependency_ioc.md)
-- [Container, Dependency and IOC](#container)
-- [Aspect Oriented Programming](#typo3-setup)
-- [Page setup](#page-setup)
-    - [Upload the page tree file](#upload-the-page-tree-file)
-    - [Go to the import view](#go-to-the-import-view)
-    - [Import the uploaded page tree file](#import-the-uploaded-page-tree-file)
-- [License](#license)
-- [Links](#links)
+- [Aspect Oriented Programming](aspect_oriented_programming.md)
+- [Data Management](data_management.md)
+- [Spring Boot](spring_boot.md)
+- [Spring MVC and the Web Layer](spring_mvc.md)
+- [Security](security.md)
+- [REST](rest.md)
+- [Testing](testing.md)
 
-## Container, Dependency and IOC
-14 Exam Questions on Topic 
+## Links
 
-What is a pattern? What is an anti-pattern. Is dependency injection a pattern?
-
-A software design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design. Dependency injection is a programming technique that makes a class independent of its dependencies
-
-An anti pattern is a common response to a recurring problem that is usually ineffective and risks being highly counterproductive
-
-
-### TYPO3 extension repository
-
-### Composer
+- [Official Pivotal Study Guide and Exam Brief](https://pivotal.io/training/certification/spring-professional-certification)
+- [Spring 5 Test Exams](http://itestjava.com/java-certification-practice-tests/home.do)
