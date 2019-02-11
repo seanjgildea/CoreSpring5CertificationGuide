@@ -64,7 +64,7 @@ CallableStatementCreator – One of the three central callback interfaces used b
 
 PreparedStatementCreator – callback interface creates a prepared statement given a Connection provided by this class.
 
-Can you execute a plain SQL statement with the JDBC template?
+# Can you execute a plain SQL statement with the JDBC template?
 
 Yes, using execute() methods – one of them accepts StatementCallback objects and the other wraps the String you pass in a StatementCallback. StatementCallback in its turn has a doInStatement() method that accepts Statement objects. So you can pass either an anonymous class with overridden doInStatement() method or just a simple String that execute() method of Statement will be run on.
 
@@ -95,7 +95,7 @@ In short a local transaction is a simple transaction that is about one single da
 
 Global transactions enable you to work with multiple transactional resources, typically relational databases and message queues. The application server manages global transactions through the JTA, which is a cumbersome API to use (partly due to its exception model). Furthermore, a JTA UserTransaction normally needs to be sourced from JNDI, meaning that you also need to use JNDI in order to use JTA. Obviously the use of global transactions would limit any potential reuse of application code, as JTA is normally only available in an application server environment.
 
-Is a transaction a cross cutting concern? How is it implemented by Spring?
+# Is a transaction a cross cutting concern? How is it implemented by Spring?
 
 Yes as it can affect many components.
 
@@ -165,7 +165,7 @@ If you call method2() from method1() within the same class, the @Transactional a
 
 But generally speaking, if method1() and method2() were in different classes, and both were annotated with @Transactional (so using REQUIRED propagation), then they would share the same transaction started in method1().
 
-Where can the @Transactional annotation be used? What is a typical usage if you put it at class level?
+# Where can the @Transactional annotation be used? What is a typical usage if you put it at class level?
 
 At the class and method levels. Class level automatically applies to all methods.
 

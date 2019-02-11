@@ -1,4 +1,4 @@
-# Data Management
+# Spring Boot
 **Core Spring 5.0 Certification Exam Study Guide**
 
 [<< Back to Home](README.md)
@@ -49,7 +49,6 @@ Externalized Configuration
 # Would you recognize common Spring Boot annotations if you saw them in the exam?
 
 @SpringBootApplication –-> @Configuration, @EnableAutoConfiguration, @ComponentScan
-
 
 
 # Would you recognize Configuration Properties if you saw them in the exam?
