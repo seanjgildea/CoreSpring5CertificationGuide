@@ -30,6 +30,7 @@
 
 ## Can you describe the lifecycle of a Spring Bean in an ApplicationContext?
 
+![spring-bean-lifecycle](http://url/to/img.png)
 
 ## How are you going to create an ApplicationContext in an integration test?
 
