@@ -28,3 +28,13 @@ Core Spring 5.0 Certification Exam Study Guide
 I've taken the exam twice. Although the pass rate is 76%, it's very difficult. It's more like a 90% because needing to select multiple answers per question. Make sure you've coded in Spring 5 and taken some courses on Udemy if you're new. 
 
 Lots of answers seem correct or use reverse boolean logic. "Which of these are NOT true, select all". Make sure you understand the Spring Lifecycle backwards and all the AOP terms. There are also somethings on the exam that are not covered on the syllabus like MySQL property settings for schema and data. 
+
+## Multiple Choice Exam Tips
+
+- Read the entire question. Read a multi-choice question in its entirety before glancing over the answer options. ...
+- Answer the question in your mind first, then scan the answers.
+- *Flag* the ones you're not sure and come back later
+- Eliminate wrong answers. ...
+- Read every answer option. ...
+- Answer the questions you know first. 
+- Look for *Absolute* and *negative* mentions 
