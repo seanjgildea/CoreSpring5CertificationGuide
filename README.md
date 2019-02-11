@@ -20,7 +20,7 @@ Core Spring 5.0 Certification Exam Study Guide
 
 - [Official Pivotal Study Guide and Exam Brief](https://pivotal.io/training/certification/spring-professional-certification)
 - [Official Pivotal Spring 5 Documentation](https://docs.spring.io/spring/docs/5.0.5.RELEASE/spring-framework-reference/index.html)
-- [Spring 5 Test Exams](http://itestjava.com/java-certification-practice-tests/home.do)- 
+- [Spring 5 Test Exams](http://itestjava.com/java-certification-practice-tests/home.do) 
 - [Spring Framework 5: Beginner to Guru](https://www.udemy.com/spring-framework-5-beginner-to-guru/)
 
 
