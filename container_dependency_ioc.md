@@ -55,6 +55,8 @@
   @Bean public Foo foo() { return new Foo(bar()); } 
   
   @Bean public Bar bar() { return new Bar(); }
+    
+![spring-framework](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/annotations.png)
 
 ## Can you describe: Dependency injection using annotations (@Component, @Autowired)?
 
