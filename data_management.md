@@ -301,3 +301,6 @@ Spring Data repositories are implemented by using fragments that form a reposito
 The Spring @Query annotation is used to customize methods(queries) of some instant repository
 @Query("select p from Person u where p.name like %?1%")
 List findAllByName(String name);
+
+
+[<< Back to Table of Contents](README.md)

@@ -96,3 +96,5 @@ RestTemplate is a synchronous client to perform HTTP requests. It is the origina
 
 ![resttemplate](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/RestTemplate-methods.png)
 
+
+[<< Back to Table of Contents](README.md)
