@@ -36,10 +36,14 @@
 ## How are you going to create an ApplicationContext in an integration test?
 
 - For automatic creation of an ApplicationContext for test purposes you will need the configuration class or XML configuration metadata file and 2 annotations.
-- @RunWith(SpringRunner.class)
-- @ContextConfiguration(classes = Config.class) 
-- or @ContextConfiguration(classes={A.class,B.class})
-- or @ContextConfiguration(locations = {"classpath:config.xml"})
+
+  @RunWith(SpringRunner.class)
+  
+  @ContextConfiguration(classes = Config.class) 
+  
+  or @ContextConfiguration(classes={A.class,B.class})
+  
+  or @ContextConfiguration(locations = {"classpath:config.xml"})
 
 ## What is the preferred way to close an application context? Does Spring Boot do this for you?
 
@@ -47,22 +51,27 @@
 
 ## Can you describe: Dependency injection using Java configuration?
 
-- One bean method should call another bean method. @Bean public Foo foo() { return new Foo(bar()); } 
-- @Bean public Bar bar() { return new Bar(); }
+- One bean method should call another bean method. 
+
+  @Bean public Foo foo() { return new Foo(bar()); } 
+  
+  @Bean public Bar bar() { return new Bar(); }
 
 ## Can you describe: Dependency injection using annotations (@Component, @Autowired)?
 
 - @Component marks the class as a Java Bean and Spring picks that up and pulls it into the Application context so that it can be injected into @Autowired instances.
 
-- @Autowired has a Required property to indicate if the value being injected is optional
+  @Autowired has a Required property to indicate if the value being injected is optional
 
-- @Required dependencies that are not set raise a corresponding exception
+  @Required dependencies that are not set raise a corresponding exception
 
 ## Can you describe: Component scanning, Stereotypes and Meta-Annotations?
 
 - Components are scanned at startup based off the specified classpath or marked with @Component
-- Stereotypes: An annotation classification for classes. @Component @Controller @Service @Repository
-- An annotation that can be used to annotate other annotations. Marking interface MyTransactionalService Meta-Annotations: An annotation that is used as part of another annotation.
+  
+  Stereotypes: An annotation classification for classes. @Component @Controller @Service @Repository
+  
+  An annotation that can be used to annotate other annotations. Marking interface MyTransactionalService Meta-Annotations: An annotation that is used as part of another annotation.
 
 ## Can you describe: Scopes for Spring beans? What is the default scope?
 
@@ -75,23 +84,30 @@
 ## What is a property source? How would you use @PropertySource?
 
 - @PropertySource("classpath:/com/myco/app.properties")
-- public class ConfigMySqlDB 
+  
+  public class ConfigMySqlDB 
 
-- @Value("${mongodb.url}")
-- private String mongodbUrl;
+  @Value("${mongodb.url}")
 
-- @Autowired
-- Environment env;
+  private String mongodbUrl;
 
-- ... env.getProperty("testbean.name");
+  @Autowired
+
+  Environment env;
+
+  ... env.getProperty("testbean.name");
 
 - Annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment. To be used in conjunction with @Configuration classes.
 
-- //To resolve ${} in @Value
-- @Bean
-- public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
-- return new PropertySourcesPlaceholderConfigurer();
-- }
+  //To resolve ${ } in @Value
+  
+  @Bean
+  
+  public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
+  
+  return new PropertySourcesPlaceholderConfigurer();
+  
+  }
 
 ## What is a BeanFactoryPostProcessor and what is it used for? When is it invoked?
 
@@ -105,16 +121,16 @@
 
 - Specialization of PlaceholderConfigurerSupport / Resolves @Value annotations
 
-- < bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" > < property name="locations" value="classpath:jdbc.properties" / > < / bean >
+  < bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" > < property name="locations" value="classpath:jdbc.properties" / > < / bean >
 
-- This bean is used for defining the location of the properties file to be used in assigning values to bean properties. But it also allows for searching the required value in the system and/or environment variables. Resolves ${...} placeholders within bean definition property values and @Value annotations
+  This bean is used for defining the location of the properties file to be used in assigning values to bean properties. But it also allows for searching the required value in the system and/or environment variables. Resolves ${...} placeholders within bean definition property values and @Value annotations
 
-- SpEL is abbreviation of Spring Expression Language which can be used to query property value from properties file (Use $),' or manipulate java object and it’s attributes at runtime( Use #).
+  SpEL is abbreviation of Spring Expression Language which can be used to query property value from properties file (Use $),' or manipulate java object and it’s attributes at runtime( Use #).
 
 ## What is a BeanPostProcessor and how is it different to a BeanFactoryPostProcessor?
 - BeanPostProcessor operates on bean instances whereas the BeanFactoryPostProcessor does it's work BEFORE the container instantiates any beans.
 
-- BeanFactoryPostProcessor implementations are "called" during startup of the Spring context after all bean definitions will have been loaded while BeanPostProcessor are "called" when the Spring IoC container instantiates a bean (i.e. during the startup for all the singleton and on demand for the proptotypes one)
+  BeanFactoryPostProcessor implementations are "called" during startup of the Spring context after all bean definitions will have been loaded while BeanPostProcessor are "called" when the Spring IoC container instantiates a bean (i.e. during the startup for all the singleton and on demand for the proptotypes one)
 
 ## What does a BeanPostProcessor do? When are they called?
 
@@ -123,16 +139,18 @@
 ## What is an initialization method and how is it declared on a Spring bean?
 
 - @Bean(initMethod="init",destroyMethod="destroy")
-- Initialization method is a method that does some initialization work after all the properties of the bean were set by the container. It can be declared using the initMethod of @Bean, using @PostConstruct, or implementing InitializingBean and overriding afterPropertiesSet(discouraged). The order the methods are called is @PostConstruct, then afterPropertiesSet, and then init-method.
+  
+  Initialization method is a method that does some initialization work after all the properties of the bean were set by the container. It can be declared using the initMethod of @Bean, using @PostConstruct, or implementing InitializingBean and overriding afterPropertiesSet(discouraged). The order the methods are called is @PostConstruct, then afterPropertiesSet, and then init-method.
 
 ## Consider how you enable JSR-250 annotations like @PostConstruct and @PreDestroy? When/how will they get called
 
 - @PostConstruct and @PreDestroy -
 
-- @Resource(name = "spellChecker") // Interprets as bean name to be injected 
-- public void setSpellChecker( Spellchecker spellChecker) { this.spellchecker = ...}
+  @Resource(name = "spellChecker") // Interprets as bean name to be injected 
+  
+  public void setSpellChecker( Spellchecker spellChecker) { this.spellchecker = ...}
 
-- For these annotation to be available you must have the CommonAnnotationBeanPostProcessor registered in context. They are declared with the init or destroy methods and also are called upon instantiation or just before beans are removed from the container.
+  For these annotation to be available you must have the CommonAnnotationBeanPostProcessor registered in context. They are declared with the init or destroy methods and also are called upon instantiation or just before beans are removed from the container.
 
 
 

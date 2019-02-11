@@ -1,6 +1,7 @@
 Core Spring 5.0 Certification Exam Study Guide
 ======================
 :star: Star this project on GitHub — It helps!!
+
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
