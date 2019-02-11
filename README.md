@@ -26,7 +26,7 @@ Core Spring 5.0 Certification Exam Study Guide
 
 ## Personal Exam Experience
 
-I've taken the exam twice. Although the pass rate is 76%, it's very difficult. It's more like a 90% because needing to select multiple answers per question. Make sure you've coded in Spring 5 and taken some courses on Udemy if you're new. 
+I've taken the exam twice. Although the pass rate is 76%, it's very difficult. It's more like a 90% because of needing to select multiple answers per question. Make sure you've coded in Spring 5 and taken some courses on Udemy if you're new. 
 
 Lots of answers seem correct or use reverse boolean logic. "Which of these are NOT true, select all". Make sure you understand the Spring Lifecycle backwards and all the AOP terms. There are also somethings on the exam that are not covered on the syllabus like MySQL property settings for schema and data. 
 
