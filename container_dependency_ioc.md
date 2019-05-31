@@ -14,11 +14,11 @@ A software design pattern is a general, reusable solution to a commonly occurrin
 
 # What is an interface and what are the advantages of making use of them in Java?
 
-A way of implementing multiple inheritance (polymorphism), interfaces only contain abstract methods and cannot be instantiated. Advantages include providing different implementations at runtime, the ability to inject dependencies, and polymorphismAn interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. Interfaces are Java's way to implement multiple inheritance. A set of methods you can call without any knowledge of the implementation.
+A way of implementing multiple inheritance (polymorphism), interfaces only contain abstract methods and cannot be instantiated. Advantages include providing different implementations at runtime, the ability to inject dependencies, and polymorphism. An interface is a reference type in Java. It is similar to a class. It is a collection of abstract methods. Interfaces are Java's way to implement multiple inheritance, ie: A set of methods you can call without any knowledge of their implementation.
 
 # What is meant by “application-context?
 
-The ApplicationContext is the central interface within a Spring application for providing configuration information to the application. It is a container used for IoC(inversion of control) over beans. Interface, a more advanced container that is a sub-interface of BeansFactory and adds enterprise-specific functionality to it.
+The ApplicationContext is the central interface within a Spring application for providing configuration information to the application. It is a container used for IoC(inversion of control) over beans. The BeanFactory interface provides an advanced configuration mechanism capable of managing any type of object. ApplicationContext is a sub-interface of BeanFactory. In short, the BeanFactory provides the configuration framework and basic functionality, and the ApplicationContext adds more enterprise-specific functionality. The ApplicationContext is a complete superset of the BeanFactory.
 
 # What is the concept of a “container” and what is its lifecycle?
 
@@ -26,7 +26,7 @@ The container will create the objects, wire them together, configure them, and m
 
 # How are you going to create a new instance of an ApplicationContext?
 
-ApplicationContext is just an interface so first you have to choose the implementation that best suits your needs. In case of XML you just supply an Spring XML Configuration Metadata file; and in case of annotations you will need a configuration class annotated with @Configuration.
+ApplicationContext is just an interface so first you have to choose the implementation that best suits your needs. In case of annotations you will need a configuration class annotated with @Configuration. In case of XML you just supply an Spring XML Configuration Metadata file.
 
 # Can you describe the lifecycle of a Spring Bean in an ApplicationContext?
 
@@ -46,7 +46,9 @@ For automatic creation of an ApplicationContext for test purposes you will need 
 
 # What is the preferred way to close an application context? Does Spring Boot do this for you?
 
-context.close() , context.registerShutdownHook(); yes it does it in springApplication.run()
+context.close() , context.registerShutdownHook(); 
+
+Yes Spring does. In springApplication.run()
 
 # Can you describe: Dependency injection using Java configuration?
 
@@ -60,19 +62,19 @@ One bean method should call another bean method.
 
 # Can you describe: Dependency injection using annotations (@Component, @Autowired)?
 
-@Component marks the class as a Java Bean and Spring picks that up and pulls it into the Application context so that it can be injected into @Autowired instances.
+@Component marks the class as a Java Bean which signals Spring to pick it up and pull it into the Application Context so that it can be injected into @Autowired instances.
 
-  @Autowired has a Required property to indicate if the value being injected is optional
+@Autowired has a Required property to indicate if the value being injected is optional
 
-  @Required dependencies that are not set raise a corresponding exception
+@Required dependencies that are not set raise a corresponding exception
 
 # Can you describe: Component scanning, Stereotypes and Meta-Annotations?
 
 Components are scanned at startup based off the specified classpath or marked with @Component
   
-  Stereotypes: An annotation classification for classes. @Component @Controller @Service @Repository
+Stereotypes: An annotation classification for classes. @Component @Controller @Service @Repository
   
-  An annotation that can be used to annotate other annotations. Marking interface MyTransactionalService Meta-Annotations: An annotation that is used as part of another annotation.
+A Stereotype is an annotation that can be used to annotate other annotations. Marking interface MyTransactionalService Meta-Annotations: An annotation that is used as part of another annotation. For example, @RestController is not a Stereotype. It is a convenience annotation composed of @Controller and @Responsebody.
 
 # Can you describe: Scopes for Spring beans? What is the default scope?
 
@@ -98,7 +100,7 @@ Beans are eagerly instantiated by default. You can override this by marking the 
 
   ... env.getProperty("testbean.name");
 
-Annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment. To be used in conjunction with @Configuration classes.
+@PropertySource is an Annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment. To be used in conjunction with @Configuration classes.
 
   //To resolve ${ } in @Value
   
