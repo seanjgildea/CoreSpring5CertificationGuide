@@ -88,7 +88,7 @@ execution(public * EmployeeManager.*(..))
 
 pointcut expressions can be combined with the operators && (and), || (or), and ! 
 
-@Pointcut("execution(* com.xyz.someapp..service.*.*(..))")
+`@Pointcut("execution(* com.xyz.someapp..service.*.*(..))")
 public void businessService() {} 
 
 @Pointcut("within(com.xyz.someapp.service..*)") 
@@ -102,7 +102,7 @@ public void inServiceLayer() {}
 public void methodsAcceptingEntities() {} 
 
 @Pointcut("@annotation(org.baeldung.aop.annotations.Loggable)")
-public void loggableMethods() {}
+public void loggableMethods() {}`
 
 # What is the JoinPoint argument used for?
 
