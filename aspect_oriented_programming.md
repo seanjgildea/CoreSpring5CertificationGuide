@@ -88,21 +88,21 @@ execution(public * EmployeeManager.*(..))
 
 pointcut expressions can be combined with the operators && (and), || (or), and ! 
 
-`@Pointcut("execution(* com.xyz.someapp..service.*.*(..))")
-public void businessService() {} 
+    @Pointcut("execution(* com.xyz.someapp..service.*.*(..))")
+    public void businessService() {} 
 
-@Pointcut("within(com.xyz.someapp.service..*)") 
-public void inServiceLayer() {} 
+    @Pointcut("within(com.xyz.someapp.service..*)") 
+    public void inServiceLayer() {} 
 
-@Pointcut("target(org.baeldung.dao.BarDao)") 
+    @Pointcut("target(org.baeldung.dao.BarDao)") 
 
-@Pointcut("this(org.baeldung.dao.FooDao)") 
+    @Pointcut("this(org.baeldung.dao.FooDao)") 
 
-@Pointcut("@args(org.baeldung.aop.annotations.Entity)")
-public void methodsAcceptingEntities() {} 
+    @Pointcut("@args(org.baeldung.aop.annotations.Entity)")
+    public void methodsAcceptingEntities() {} 
 
-@Pointcut("@annotation(org.baeldung.aop.annotations.Loggable)")
-public void loggableMethods() {}`
+    @Pointcut("@annotation(org.baeldung.aop.annotations.Loggable)")
+    public void loggableMethods() {}
 
 # What is the JoinPoint argument used for?
 
@@ -119,8 +119,8 @@ toString() (prints a useful description of the method being advised).
 Used ONLY in the @Around method
 proceed() will call the advised method
 
-@Around("execution(* com.mumz.test.spring.aop.BookShelf.addBook(..))")
-public void aroundAddAdvice(ProceedingJoinPoint pjp){...
+    @Around("execution(* com.mumz.test.spring.aop.BookShelf.addBook(..))")
+    public void aroundAddAdvice(ProceedingJoinPoint pjp){...
 
 ProceedingJoinPoint is used to reference the method that is being advised with an @Around advice. Call the ProceedingJoinPoint’s proceed() method for the advised method to run.
 
