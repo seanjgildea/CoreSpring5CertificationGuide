@@ -36,17 +36,18 @@ ApplicationContext is just an interface so first you have to choose the implemen
 
 For automatic creation of an ApplicationContext for test purposes you will need the configuration class or XML configuration metadata file and 2 annotations.
 
-  @RunWith(SpringRunner.class)
+      @RunWith(SpringRunner.class)
   
-  @ContextConfiguration(classes = Config.class) 
+      @ContextConfiguration(classes = Config.class) 
   
-  or @ContextConfiguration(classes={A.class,B.class})
+      or @ContextConfiguration(classes={A.class,B.class})
   
-  or @ContextConfiguration(locations = {"classpath:config.xml"})
+      or @ContextConfiguration(locations = {"classpath:config.xml"})
 
 # What is the preferred way to close an application context? Does Spring Boot do this for you?
 
-context.close() , context.registerShutdownHook(); 
+    context.close() 
+    context.registerShutdownHook(); 
 
 Yes Spring does. In springApplication.run()
 
@@ -54,9 +55,9 @@ Yes Spring does. In springApplication.run()
 
 One bean method should call another bean method. 
 
-  @Bean public Foo foo() { return new Foo(bar()); } 
+    @Bean public Foo foo() { return new Foo(bar()); } 
   
-  @Bean public Bar bar() { return new Bar(); }
+    @Bean public Bar bar() { return new Bar(); }
     
 ![spring-framework](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/annotations.png)
 
@@ -86,31 +87,31 @@ Beans are eagerly instantiated by default. You can override this by marking the 
 
 # What is a property source? How would you use @PropertySource?
 
-@PropertySource("classpath:/com/myco/app.properties")
+    @PropertySource("classpath:/com/myco/app.properties")
   
-  public class ConfigMySqlDB 
+    public class ConfigMySqlDB 
 
-  @Value("${mongodb.url}")
+    @Value("${mongodb.url}")
 
-  private String mongodbUrl;
+    private String mongodbUrl;
 
-  @Autowired
+    @Autowired
 
-  Environment env;
+    Environment env;
 
-  ... env.getProperty("testbean.name");
+    env.getProperty("testbean.name");
 
 @PropertySource is an Annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment. To be used in conjunction with @Configuration classes.
 
   //To resolve ${ } in @Value
   
-  @Bean
+    @Bean
   
-  public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
+    public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
   
-  return new PropertySourcesPlaceholderConfigurer();
+    return new PropertySourcesPlaceholderConfigurer();
   
-  }
+    }
 
 # What is a BeanFactoryPostProcessor and what is it used for? When is it invoked?
 
@@ -124,7 +125,7 @@ You would use static @Bean when defining post-processor beans, e.g. of type Bean
 
  Specialization of PlaceholderConfigurerSupport / Resolves @Value annotations
 
-  < bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" > < property name="locations" value="classpath:jdbc.properties" / > < / bean >
+    < bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" > < property name="locations" value="classpath:jdbc.properties" / > < / bean >
 
   This bean is used for defining the location of the properties file to be used in assigning values to bean properties. But it also allows for searching the required value in the system and/or environment variables. Resolves ${...} placeholders within bean definition property values and @Value annotations
 
@@ -141,17 +142,17 @@ You would use static @Bean when defining post-processor beans, e.g. of type Bean
 
 # What is an initialization method and how is it declared on a Spring bean?
 
-@Bean(initMethod="init",destroyMethod="destroy")
+    @Bean(initMethod="init",destroyMethod="destroy")
   
   Initialization method is a method that does some initialization work after all the properties of the bean were set by the container. It can be declared using the initMethod of @Bean, using @PostConstruct, or implementing InitializingBean and overriding afterPropertiesSet(discouraged). The order the methods are called is @PostConstruct, then afterPropertiesSet, and then init-method.
 
 # Consider how you enable JSR-250 annotations like @PostConstruct and @PreDestroy? When/how will they get called
 
- @PostConstruct and @PreDestroy -
+     @PostConstruct and @PreDestroy -
 
-  @Resource(name = "spellChecker") // Interprets as bean name to be injected 
+    @Resource(name = "spellChecker") // Interprets as bean name to be injected 
   
-  public void setSpellChecker( Spellchecker spellChecker) { this.spellchecker = ...}
+    public void setSpellChecker( Spellchecker spellChecker) { this.spellchecker = ...}
 
   For these annotation to be available you must have the CommonAnnotationBeanPostProcessor registered in context. They are declared with the init or destroy methods and also are called upon instantiation or just before beans are removed from the container.
 
