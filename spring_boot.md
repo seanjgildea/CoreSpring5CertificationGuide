@@ -26,72 +26,69 @@ application.properties or application.yml , the default property source is on th
 
 Properties are considered in the following order:
 
-• Devtools global settings properties on your home directory (~/.spring-boot-devtools.properties when devtools is active).
-• @TestPropertySource annotations on your tests.
-• @SpringBootTest#properties annotation attribute on your tests.
-• Command line arguments.
-• Properties from SPRING_APPLICATION_JSON (inline JSON embedded in an environment variable or system property).
-• ServletConfig init parameters.
-• ServletContext init parameters.
-• JNDI attributes from java:comp/env.
-• Java System properties (System.getProperties()).
-• OS environment variables.
-• A RandomValuePropertySource that has properties only in random.*.
-• Profile-specific application properties outside of your packaged jar (application-{profile}.properties and YAML variants).
-• Profile-specific application properties packaged inside your jar (application-{profile}.properties and YAML variants).
-• Application properties outside of your packaged jar (application.properties and YAML variants).
-• Application properties packaged inside your jar (application.properties and YAML variants).
-• @PropertySource annotations on your @Configuration classes.
-• Default properties (specified by setting SpringApplication.setDefaultProperties).
+- Devtools global settings properties on your home directory (~/.spring-boot-devtools.properties when devtools is active).
+- @TestPropertySource annotations on your tests.
+- @SpringBootTest#properties annotation attribute on your tests.
+- Command line arguments.
+- Properties from SPRING_APPLICATION_JSON (inline JSON embedded in an environment variable or system property).
+- ServletConfig init parameters.
+- ServletContext init parameters.
+- JNDI attributes from java:comp/env.
+- Java System properties (System.getProperties()).
+- OS environment variables.
+- A RandomValuePropertySource that has properties only in random.*.
+- Profile-specific application properties outside of your packaged jar (application-{profile}.properties and YAML variants).
+- Profile-specific application properties packaged inside your jar (application-{profile}.properties and YAML variants).
+- Application properties outside of your packaged jar (application.properties and YAML variants).
+- Application properties packaged inside your jar (application.properties and YAML variants).
+- @PropertySource annotations on your @Configuration classes.
+- Default properties (specified by setting SpringApplication.setDefaultProperties).
 
 Externalized Configuration
 
 # Would you recognize common Spring Boot annotations if you saw them in the exam?
 
-@SpringBootApplication –-> @Configuration, @EnableAutoConfiguration, @ComponentScan
+    @SpringBootApplication –-> @Configuration, @EnableAutoConfiguration, @ComponentScan
 
 ![spring-boot-annotations](https://github.com/seanjgildea/CoreSpring5CertificationGuide/blob/master/img/spring-boot-annotations.png)
 
 # Would you recognize Configuration Properties if you saw them in the exam?
 
-//First declare the Config File
-@Configuration
-@EnableConfigurationProperties(AcmeProperties.class)
-public class MyConfiguration {}
+#### First declare the Config File
+    @Configuration
+    @EnableConfigurationProperties(AcmeProperties.class)
+    public class MyConfiguration {}
 
 
-//Then define the properties
-@Component
-@ConfigurationProperties(prefix="acme")
-public class AcmeProperties {}
+#### Then define the properties
+    @Component
+    @ConfigurationProperties(prefix="acme")
+    public class AcmeProperties {}
 
 # What is the difference between an embedded container and a WAR?
 
-• WAR's allow you to use JSP as Tomcat's JSP support is tightly coupled with that of a WAR layout.
-
-• WAR's give the option of deploying your app to a standalone container or app server
-
-• JAR's are for an embedded container that comes with the resulting application
-
-• Change 'packaging' value to 'war' in the maven pom.xml
+- WAR's allow you to use JSP as Tomcat's JSP support is tightly coupled with that of a WAR layout.
+- WAR's give the option of deploying your app to a standalone container or app server
+- JAR's are for an embedded container that comes with the resulting application
+- Change 'packaging' value to 'war' in the maven pom.xml
 
 # What embedded containers does Spring Boot support?
 
-TomCat, Jetty and Undertow
+- TomCat, Jetty and Undertow
 
-To build a war file that is both executable and deployable into an external container, you need to mark the embedded container dependencies
+- To build a war file that is both executable and deployable into an external container, you need to mark the embedded container dependencies
 
-< dependency >
-    < groupId>org.springframework.boot< / groupId>
-    < artifactId>spring-boot-starter-tomcat< / artifactId>
-    < scope>provided< / scope>
-< /dependency>
+        < dependency >
+            < groupId>org.springframework.boot< / groupId>
+            < artifactId>spring-boot-starter-tomcat< / artifactId>
+            < scope>provided< / scope>
+        < /dependency>
 
 SpringBootServletInitializer
 
 # What does @EnableAutoConfiguration do?
 
-This annotation tells Spring Boot to “guess” how you want to configure Spring, based on the jar dependencies that you have added.
+- This annotation tells Spring Boot to “guess” how you want to configure Spring, based on the jar dependencies that you have added.
 
 # What about @SpringBootApplication?
 
@@ -105,11 +102,11 @@ This annotation tells Spring Boot to “guess” how you want to configure Sprin
 
 # What is a Spring Boot starter POM? Why is it useful?
 
-Starter POMs are a set of convenient dependency descriptors that you can include in your application. You get a one-stop-shop for all the Spring and related technology that you need, without having to hunt through sample code and copy paste loads of dependency descriptors.
+- Starter POMs are a set of convenient dependency descriptors that you can include in your application. You get a one-stop-shop for all the Spring and related technology that you need, without having to hunt through sample code and copy paste loads of dependency descriptors.
 
-Spring Boot supports both Java properties and YML files. Would you recognize and understand them if you saw them?
+- Spring Boot supports both Java properties and YML files. Would you recognize and understand them if you saw them?
 
-Java properties files come in application.properties file; YAML come in application.yml
+- Java properties files come in application.properties file; YAML come in application.yml
 
 # Can you control logging with Spring Boot? How?
 
