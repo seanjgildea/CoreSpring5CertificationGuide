@@ -1,5 +1,4 @@
-# Core Spring 5.0 Certification Exam Study Guide :notebook:
-======================
+# :notebook: Core Spring 5.0 Certification Exam Study Guide :notebook:
 :star: Star this project on GitHub — It helps!!
 
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/seanjgildea/CoreSpring5CertificationGuide/issues)
