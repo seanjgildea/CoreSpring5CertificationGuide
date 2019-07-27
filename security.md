@@ -28,27 +28,27 @@
 
 - The order that filters are defined in the chain is very important. Irrespective of which filters you are actually using, the order should be as follows:
 
-    ChannelProcessingFilter
+- ChannelProcessingFilter
 
-    SecurityContextPersistenceFilter
+- SecurityContextPersistenceFilter
 
-    ConcurrentSessionFilter
+- ConcurrentSessionFilter
 
-    UsernamePasswordAuthenticationFilter
-    CasAuthenticationFilter
-    BasicAuthenticationFilter
+- UsernamePasswordAuthenticationFilter
+- CasAuthenticationFilter
+- BasicAuthenticationFilter
 
-    SecurityContextHolderAwareRequestFilter
+- SecurityContextHolderAwareRequestFilter
 
-    JaasApiIntegrationFilter
+- JaasApiIntegrationFilter
 
-    RememberMeAuthenticationFilter
+- RememberMeAuthenticationFilter
 
-    AnonymousAuthenticationFilter
+- AnonymousAuthenticationFilter
 
-    ExceptionTranslationFilter
+- ExceptionTranslationFilter
 
-    FilterSecurityInterceptor
+- FilterSecurityInterceptor
 
 ### What is a security context?
 
