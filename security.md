@@ -1,5 +1,5 @@
 # Security
-**Core Spring 5.0 Certification Exam Study Guide**
+## Core Spring 5.0 Certification Exam Study Guide
 
 [<< Back to Table of Contents](README.md)
 
