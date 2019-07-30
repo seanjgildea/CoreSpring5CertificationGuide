@@ -1,5 +1,5 @@
 # :notebook: Core Spring 5.0 Certification Exam Study Guide :notebook:
-:star: Star this project on GitHub — It helps!!
+:star: Star this project on GitHub — It helps!! Or help me make it better!
 
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/seanjgildea/CoreSpring5CertificationGuide/issues)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
