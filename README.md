@@ -2,6 +2,7 @@
 :star: Star this project on GitHub — It helps!!
 
 *July 30th, 2019 - Minor change for Meta-Annotations/Stereotypes*
+
 *July 27th, 2019 - Many markdown formatting improvements*
 
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/seanjgildea/CoreSpring5CertificationGuide/issues)
