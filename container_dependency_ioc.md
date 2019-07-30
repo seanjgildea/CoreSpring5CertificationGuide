@@ -75,7 +75,9 @@
   
 - Stereotypes: An annotation classification for classes. @Component @Controller @Service @Repository
   
-- A Stereotype is an annotation that can be used to annotate other annotations. Marking interface MyTransactionalService Meta-Annotations: An annotation that is used as part of another annotation. For example, @RestController is not a Stereotype. It is a convenience annotation composed of @Controller and @Responsebody.
+- A Stereotype is an annotation that can be used to annotate other annotations. 
+
+- Meta-Annotations: An annotation that is used as part of another annotation. For example, @RestController is not a Stereotype. It is a convenience annotation composed of @Controller and @Responsebody.
 
 ### Can you describe: Scopes for Spring beans? What is the default scope?
 
@@ -101,17 +103,17 @@
 
     env.getProperty("testbean.name");
 
-@PropertySource is an Annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment. To be used in conjunction with @Configuration classes.
+- @PropertySource is an Annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment. To be used in conjunction with @Configuration classes.
 
-  //To resolve ${ } in @Value
+      To resolve ${ } in @Value
   
-    @Bean
-  
-    public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
-  
-    return new PropertySourcesPlaceholderConfigurer();
-  
-    }
+          @Bean
+
+          public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
+
+          return new PropertySourcesPlaceholderConfigurer();
+
+          }
 
 ### What is a BeanFactoryPostProcessor and what is it used for? When is it invoked?
 
