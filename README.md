@@ -38,10 +38,9 @@
 
 ### Multiple Choice Exam Tips
 
-- Read the entire question. Read a multi-choice question in its entirety before glancing over the answer options. ...
+- Many people recommend answering the questions you know *first* and coming back to the ones you don't know at the end. 
+- Read a multi-choice question in its entirety before glancing over the answer options...
 - Answer the question in your mind first, then scan the answers.
-- *Flag* the ones you're not sure and come back later
-- Eliminate wrong answers. ...
-- Read every answer option. ...
-- Answer the questions you know first. 
+- Eliminate the wrong answers.
+- Read every answer option even if you think you already have the answer.
 - Look for *Absolute* and *negative* mentions 
