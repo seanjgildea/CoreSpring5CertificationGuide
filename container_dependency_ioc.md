@@ -10,11 +10,11 @@
 
 ### What is a pattern? What is an anti-pattern? Is dependency injection a pattern?
 
-- A software design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design. Dependency injection is a programming technique that makes a class independent of its dependencies. An anti pattern is a common response to a recurring problem that is usually ineffective and risks being highly counterproductive
+- A software design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design. An anti pattern is a common response to a recurring problem that is usually ineffective and risks being highly counterproductive. Dependency injection is a programming technique that makes a class independent of its dependencies. 
 
 ### What is an interface and what are the advantages of making use of them in Java?
 
-- A way of implementing multiple inheritance (polymorphism), interfaces only contain abstract methods and cannot be instantiated. Advantages include providing different implementations at runtime, the ability to inject dependencies, and polymorphism. An interface is a reference type in Java. It is similar to a class. It is a collection of abstract methods. Interfaces are Java's way to implement multiple inheritance, ie: A set of methods you can call without any knowledge of their implementation.
+- An interface is a way of implementing multiple inheritance (polymorphism). Interfaces only contain abstract methods and cannot be instantiated. Advantages include providing different implementations at runtime, the ability to inject dependencies, and polymorphism. An interface is a reference type in Java. It is similar to a class. It is a collection of abstract methods. Interfaces are Java's way to implement multiple inheritance, ie: A set of methods you can call without any knowledge of their implementation.
 
 ### What is meant by “application-context?
 
